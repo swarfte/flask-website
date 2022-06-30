@@ -1,0 +1,24 @@
+{% extends "display.html" %}
+
+
+{% block title %}
+{{ user.username}} home 
+{% endblock %}
+
+{% block header %}
+
+<h1> hello ,{{ user.username }}</h1>
+
+{% endblock %}
+
+{% block aside %}
+{% if user.level == 1 %}
+<a href="{{ admin_location }}/member "> admin system </a>
+{% endif %}
+{% endblock %}
+
+{% block footer %}
+
+<a href="{{ user_location}}/{{ user.username}}/logout"> log out </a>
+
+{% endblock %}

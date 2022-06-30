@@ -1,0 +1,5 @@
+{
+    "auth":"/auth",
+    "main":"/",
+    "admin":"/admin"
+}

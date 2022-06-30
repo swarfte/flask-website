@@ -1,0 +1,23 @@
+{% extends "display.html" %}
+
+{% block title %}
+Update Account
+{% endblock %}
+
+{% block header %}
+<h1> Update the date!</h1>
+{% endblock %}
+
+{% block article %}
+<div>
+    <form action="{{ location }}/update/{{ user.username }}/{{ user.password }}" method = "POST">
+        <input type = "text" required = "required" name="username" placeholder="Username" value = "{{ user.username }}">
+        <input type = "password" required = "required" name="password" placeholder="Password" value = "{{ user.password }}">
+        <input type = "text" required = "required" name="level" placeholder="Level" value = "{{ user.level }}">
+        <p> {{prompt}} </p>
+        <input type = "submit" value = "Update">
+    </form>
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,27 @@
+{% extends "display.html" %}
+
+{% block title %}
+
+sign up
+
+{% endblock %}
+
+{% block header %}
+
+<h1> Sign up now! </h1>
+
+{% endblock %}
+
+{% block article %}
+
+<div>
+    <form action="{{ location }}/signup" method="POST">
+        <input type = "text" required = "required" name="username" placeholder="Username" value= "{{ username }}">
+        <input type = "password" required = "required" name="password" placeholder="Password" value="{{ password }}">
+        <input type = "password" required = "required" name="confirm_password" placeholder="Confirm Password">
+        <p> {{ prompt }} </p>
+        <input type = "submit" value = "Sign Up">
+    </form>
+</div>
+
+{% endblock %}

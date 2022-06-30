@@ -1,0 +1,25 @@
+{% extends "display.html" %}
+
+{% block title %}
+login 
+{% endblock %}
+
+{% block header %}
+
+<h1> Swarfte home</h1>
+
+{% endblock %}
+
+{% block article %}
+
+<div>
+    <form action="{{ location }}/login" method="POST">
+        <input type = "text" required = "required" name="username" placeholder="Username" value = "{{ username }}">
+        <input type = "password" required = "required" name="password" placeholder="Password" value = "{{ password }}">
+        <p> {{prompt}} </p>
+        <input type = "submit" value = "Log in">
+        <a href="{{ location }}/signup"> Sign up </a>
+    </form>
+</div>
+
+{% endblock %}

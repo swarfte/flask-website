@@ -1,0 +1,13 @@
+{% extends "display.html" %}
+
+{% block title %}
+logout {{ user.username}}
+{% endblock %}
+
+{% block header %}
+<h1> Log out successful , {{ user.username }}</h1>
+{% endblock %}  
+
+{% block footer %}
+<a href="/"> back to front page</a>
+{% endblock %}

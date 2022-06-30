@@ -1,0 +1,24 @@
+{% extends "display.html" %}
+
+{% block title %}
+admin access
+{% endblock %}
+
+{% block header %}
+<h1>Access Admin System</h1>
+{% endblock %}
+
+{% block article %}
+<div>
+    <form action = "{{ location }}/member" method = "POST">
+        <input type = "text" required = "required" name="username" placeholder="Username" value = "{{ username }}">
+        <input type = "password" required = "required" name="password" placeholder="Password" value = "{{ password }}">
+        <p> {{prompt}} </p>
+        <input type = "submit" value = "Log in admin">
+    </form>
+</div>
+{% endblock %}
+
+{% block footer %}
+<p> if your account does not belong to admin , it will be blacklist</p>
+{% endblock %}
